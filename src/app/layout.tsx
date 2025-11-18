@@ -29,11 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className={inter.variable}>
-      <body className="font-sans antialiased nature-pattern">
-        <Navigation />
-        <main className="min-h-screen">
-          {children}
-        </main>
+      <body className="font-sans antialiased bg-white text-gray-900">
+        <div className="min-h-screen bg-white">
+          <Navigation />
+          <main className="min-h-screen bg-white">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
