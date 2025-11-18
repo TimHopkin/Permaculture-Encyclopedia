@@ -27,6 +27,7 @@ const sdgMappings = [
     number: 1,
     title: "No Poverty",
     description: "End poverty in all its forms everywhere",
+    image: "/images/sdg/SDG-1-No-Poverty-800x800.png",
     permacultureSolutions: [
       "Food forests providing free, nutritious food for communities",
       "Local economic systems through farmers' markets and cooperatives",
@@ -39,6 +40,7 @@ const sdgMappings = [
     number: 2,
     title: "Zero Hunger", 
     description: "End hunger, achieve food security and promote sustainable agriculture",
+    image: "/images/sdg/SDG-2-Zero-Hunger-800x800.png",
     permacultureSolutions: [
       "Diverse polyculture systems increasing food security and nutrition",
       "Seed saving and heritage variety preservation",
@@ -51,6 +53,7 @@ const sdgMappings = [
     number: 3,
     title: "Good Health and Well-Being",
     description: "Ensure healthy lives and promote well-being for all at all ages",
+    image: "/images/sdg/SDG-3-Good-Health-and-Well-being-800x800.png",
     permacultureSolutions: [
       "Medicinal plant gardens and herbal medicine systems",
       "Pollution-free food production without synthetic chemicals",
@@ -63,6 +66,7 @@ const sdgMappings = [
     number: 4,
     title: "Quality Education",
     description: "Ensure inclusive and equitable quality education and promote lifelong learning",
+    image: "/images/sdg/SDG-4-Quality-Education-280x280.png",
     permacultureSolutions: [
       "Hands-on ecological education in school gardens and food forests",
       "Traditional knowledge preservation and sharing",
@@ -75,6 +79,7 @@ const sdgMappings = [
     number: 5,
     title: "Gender Equality",
     description: "Achieve gender equality and empower all women and girls",
+    image: "/images/sdg/SDG-5-Gender-Equality-280x280.png",
     permacultureSolutions: [
       "Women's cooperatives in sustainable agriculture and food processing",
       "Equal access to land and resources through community land tenure",
@@ -87,6 +92,7 @@ const sdgMappings = [
     number: 6,
     title: "Clean Water and Sanitation",
     description: "Ensure availability and sustainable management of water and sanitation for all",
+    image: "/images/sdg/SDG-6-Clean-Water-and-Sanitation-280x280.png",
     permacultureSolutions: [
       "Rainwater harvesting and water storage systems",
       "Greywater treatment through constructed wetlands",
@@ -99,6 +105,7 @@ const sdgMappings = [
     number: 7,
     title: "Affordable and Clean Energy",
     description: "Ensure access to affordable, reliable, sustainable and modern energy for all",
+    image: "/images/sdg/SDG-7-Affordable-and-clean-energy-280x280.png",
     permacultureSolutions: [
       "Solar passive design reducing energy needs for heating and cooling",
       "Biogas from compost and anaerobic digesters",
@@ -111,6 +118,7 @@ const sdgMappings = [
     number: 8,
     title: "Decent Work and Economic Growth",
     description: "Promote sustained, inclusive and sustainable economic growth, full and productive employment",
+    image: "/images/sdg/SDG-8-Work-and-economic-growth-280x280.png",
     permacultureSolutions: [
       "Local food systems creating sustainable employment",
       "Value-added processing and farmers' market enterprises",
@@ -123,6 +131,7 @@ const sdgMappings = [
     number: 9,
     title: "Industry, Innovation and Infrastructure",
     description: "Build resilient infrastructure, promote inclusive and sustainable industrialisation",
+    image: "/images/sdg/SDG-9-Industry-Innovation-and-Infrastructure-280x280.png",
     permacultureSolutions: [
       "Natural building techniques using local materials",
       "Distributed renewable energy and water systems",
@@ -135,6 +144,7 @@ const sdgMappings = [
     number: 10,
     title: "Reduced Inequalities",
     description: "Reduce inequality within and among countries",
+    image: "/images/sdg/SDG-10-Reduced-Inequalities-280x280.png",
     permacultureSolutions: [
       "Community land ownership and commons management",
       "Fair trade and direct farmer-to-consumer relationships",
@@ -147,6 +157,7 @@ const sdgMappings = [
     number: 11,
     title: "Sustainable Cities and Communities",
     description: "Make cities and human settlements inclusive, safe, resilient and sustainable",
+    image: "/images/sdg/SDG-11-Sustainable-Cities-and-Communities-280x280.png",
     permacultureSolutions: [
       "Urban food forests and community gardens",
       "Green infrastructure for stormwater management and air purification",
@@ -159,6 +170,7 @@ const sdgMappings = [
     number: 12,
     title: "Responsible Consumption and Production",
     description: "Ensure sustainable consumption and production patterns",
+    image: "/images/sdg/SDG-12-Responsible-consumption-and-production-280x280.png",
     permacultureSolutions: [
       "Circular economy principles with zero waste systems",
       "Local production reducing transport and packaging",
@@ -171,6 +183,7 @@ const sdgMappings = [
     number: 13,
     title: "Climate Action",
     description: "Take urgent action to combat climate change and its impacts",
+    image: "/images/sdg/SDG-13-Climate-Action-280x280.png",
     permacultureSolutions: [
       "Carbon sequestration through soil building and tree planting",
       "Regenerative agriculture reducing greenhouse gas emissions",
@@ -183,6 +196,7 @@ const sdgMappings = [
     number: 14,
     title: "Life Below Water",
     description: "Conserve and sustainably use the oceans, seas and marine resources",
+    image: "/images/sdg/SDG-14-Life-Below-Water-280x280.png",
     permacultureSolutions: [
       "Watershed protection preventing agricultural runoff",
       "Sustainable fishing and aquaculture systems",
@@ -195,6 +209,7 @@ const sdgMappings = [
     number: 15,
     title: "Life on Land",
     description: "Protect, restore and promote sustainable use of terrestrial ecosystems",
+    image: "/images/sdg/SDG-15-Life-on-Land-280x280.png",
     permacultureSolutions: [
       "Reforestation and food forest establishment",
       "Habitat creation for wildlife through diverse plantings",
@@ -207,6 +222,7 @@ const sdgMappings = [
     number: 16,
     title: "Peace, Justice and Strong Institutions",
     description: "Promote peaceful and inclusive societies for sustainable development",
+    image: "/images/sdg/SDG-16-Peace-Justice-and-Strong-Institutions-280x280.png",
     permacultureSolutions: [
       "Community decision-making and consensus building",
       "Cooperative ownership and resource sharing",
@@ -219,6 +235,7 @@ const sdgMappings = [
     number: 17,
     title: "Partnership for the Goals",
     description: "Strengthen the means of implementation and revitalise the global partnership",
+    image: "/images/sdg/SDG-17-Partnership-for-the-Goals-280x280.png",
     permacultureSolutions: [
       "Global networks sharing permaculture knowledge and techniques",
       "North-South cooperation in regenerative development",
@@ -292,8 +309,14 @@ export default function SDG() {
                   <Card className="overflow-hidden">
                     <CardHeader className="bg-gradient-to-r from-forest-50 to-earth-50 p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-16 h-16 bg-gradient-to-br from-forest-500 to-earth-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                          {sdg.number}
+                        <div className="flex-shrink-0">
+                          <Image
+                            src={sdg.image}
+                            alt={`UN SDG ${sdg.number}: ${sdg.title}`}
+                            width={80}
+                            height={80}
+                            className="rounded-lg shadow-sm"
+                          />
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-2xl mb-2">SDG {sdg.number}: {sdg.title}</CardTitle>
