@@ -22,14 +22,14 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-forest-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
-              className="p-2 bg-forest-100 rounded-lg"
+              className="p-2 bg-gradient-to-br from-forest-100 to-earth-100 rounded-lg shadow-sm"
             >
               <Leaf className="w-6 h-6 text-forest-600" />
             </motion.div>
@@ -45,17 +45,17 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'px-4 py-2 rounded-lg text-sm font-medium transition-colors relative',
+                  'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative',
                   pathname === item.href
-                    ? 'text-forest-700 bg-forest-50'
-                    : 'text-gray-600 hover:text-forest-600 hover:bg-forest-50'
+                    ? 'text-forest-700 bg-gradient-to-r from-forest-50 to-earth-50 shadow-sm'
+                    : 'text-gray-700 hover:text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-sky-50'
                 )}
               >
                 {item.name}
                 {pathname === item.href && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-forest-100 rounded-lg -z-10"
+                    className="absolute inset-0 bg-gradient-to-r from-forest-100 via-earth-100 to-sky-100 rounded-lg -z-10"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   />
@@ -68,7 +68,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-600 hover:text-forest-600 hover:bg-forest-50"
+              className="p-2 rounded-lg text-gray-700 hover:text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-earth-50 transition-all duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -90,10 +90,10 @@ export default function Navigation() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    'block px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+                    'block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
                     pathname === item.href
-                      ? 'text-forest-700 bg-forest-50'
-                      : 'text-gray-600 hover:text-forest-600 hover:bg-forest-50'
+                      ? 'text-forest-700 bg-gradient-to-r from-forest-50 to-earth-50'
+                      : 'text-gray-700 hover:text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-sky-50'
                   )}
                 >
                   {item.name}

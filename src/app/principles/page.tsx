@@ -159,7 +159,7 @@ export default function Principles() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
               The <span className="gradient-text">12 Design Principles</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               David Holmgren's 12 principles provide a framework for thinking and decision-making in permaculture design. 
               Each principle offers guidance for creating sustainable, regenerative systems.
             </p>

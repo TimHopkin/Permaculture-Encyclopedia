@@ -39,7 +39,7 @@ export default function Home() {
                 <span className="gradient-text block">Manual for Solving</span>
                 <span className="block">Global Challenges</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 Discover how permaculture principles can empower you to create regenerative solutions 
                 that heal the planet whilst addressing the UN Sustainable Development Goals.
               </p>
@@ -64,21 +64,21 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute top-20 left-10 opacity-20"
+            className="absolute top-20 left-10 opacity-30"
           >
-            <Leaf className="w-12 h-12 text-forest-600" />
+            <Leaf className="w-12 h-12 text-forest-500" />
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute top-32 right-16 opacity-20"
+            className="absolute top-32 right-16 opacity-25"
           >
-            <Globe className="w-16 h-16 text-sky-500" />
+            <Globe className="w-16 h-16 text-sky-400" />
           </motion.div>
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute bottom-40 left-1/4 opacity-20"
+            className="absolute bottom-40 left-1/4 opacity-35"
           >
             <Sparkles className="w-10 h-10 text-earth-500" />
           </motion.div>
@@ -98,7 +98,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Three Simple Principles, <span className="gradient-text">Infinite Possibilities</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
               At its heart, permaculture rests on three ethical foundations that guide every decision and design.
             </p>
           </motion.div>
@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-forest-50 to-earth-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-forest-50 via-earth-50 to-sky-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -167,16 +167,24 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to <span className="gradient-text">Transform Your World</span>?
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
               Whether you're working with a balcony garden or planning bioregional change, 
               permaculture offers practical solutions for every scale.
             </p>
-            <Link href="/introduction">
-              <Button size="lg" className="group">
-                Begin Your Permaculture Journey
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/introduction">
+                <Button size="lg" className="group">
+                  Begin Your Permaculture Journey
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/start">
+                <Button variant="secondary" size="lg" className="group">
+                  Start Today
+                  <Sparkles className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

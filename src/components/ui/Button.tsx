@@ -11,10 +11,10 @@ interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 const variants = {
-  primary: 'bg-forest-600 hover:bg-forest-700 text-white shadow-md hover:shadow-lg',
-  secondary: 'bg-earth-500 hover:bg-earth-600 text-white shadow-md hover:shadow-lg',
-  outline: 'border-2 border-forest-600 text-forest-600 hover:bg-forest-50 hover:text-forest-700',
-  ghost: 'text-forest-600 hover:bg-forest-50 hover:text-forest-700'
+  primary: 'bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-600 hover:to-forest-700 text-white shadow-md hover:shadow-lg',
+  secondary: 'bg-gradient-to-r from-earth-500 to-sunset-500 hover:from-earth-600 hover:to-sunset-600 text-white shadow-md hover:shadow-lg',
+  outline: 'border-2 border-forest-500 text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-earth-50 hover:text-forest-700',
+  ghost: 'text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-sky-50 hover:text-forest-700'
 }
 
 const sizes = {
@@ -35,7 +35,7 @@ export default function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={cn(
-        'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2',
+        'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:ring-offset-2 transform hover:scale-[1.02]',
         variants[variant],
         sizes[size],
         className

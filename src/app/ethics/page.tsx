@@ -36,7 +36,7 @@ export default function Ethics() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
               The <span className="gradient-text">Three Ethics</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               The moral compass that guides every permaculture decision. These three principles 
               form the foundation upon which all sustainable design must rest.
             </p>

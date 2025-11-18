@@ -4,9 +4,11 @@
 :root {
   --background: #fefefe;
   --foreground: #1a1a1a;
-  --earth-primary: #8b6f3f;
-  --forest-primary: #3a9b3a;
-  --sky-primary: #0ea5e9;
+  --earth-primary: #f7c948;
+  --forest-primary: #22c55e;
+  --sky-primary: #38bdf8;
+  --sunset-primary: #f97316;
+  --flower-primary: #a855f7;
 }
 
 @theme inline {
@@ -41,7 +43,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--earth-primary), var(--forest-primary));
+  background: linear-gradient(135deg, var(--forest-primary), var(--earth-primary), var(--sunset-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,6 +51,19 @@ body {
 
 .nature-pattern {
   background-image: 
-    radial-gradient(circle at 20% 80%, rgba(58, 155, 58, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 111, 63, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(247, 201, 72, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.03) 0%, transparent 70%);
+}
+
+.vibrant-gradient {
+  background: linear-gradient(135deg, var(--forest-primary), var(--sky-primary));
+}
+
+.warm-gradient {
+  background: linear-gradient(135deg, var(--sunset-primary), var(--earth-primary));
+}
+
+.nature-gradient {
+  background: linear-gradient(135deg, var(--forest-primary), var(--earth-primary));
 }
