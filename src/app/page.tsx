@@ -1,65 +1,185 @@
-import Image from "next/image";
+'use client'
+
+import React from 'react'
+import { motion } from 'framer-motion'
+import { ArrowRight, Leaf, Users, Globe, Sparkles } from 'lucide-react'
+import Button from '@/components/ui/Button'
+import Card, { CardContent, CardDescription, CardTitle } from '@/components/ui/Card'
+import Link from 'next/link'
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: 'easeOut' }
+}
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="relative overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative px-4 py-20 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={stagger}
+            className="space-y-8"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <motion.div variants={fadeInUp} className="space-y-4">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+                <span className="block">The Open-Source</span>
+                <span className="gradient-text block">Manual for Solving</span>
+                <span className="block">Global Challenges</span>
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Discover how permaculture principles can empower you to create regenerative solutions 
+                that heal the planet whilst addressing the UN Sustainable Development Goals.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/introduction">
+                <Button size="lg" className="group">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/start">
+                <Button variant="outline" size="lg">
+                  Get Started Today
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Floating Elements */}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute top-20 left-10 opacity-20"
           >
-            Documentation
-          </a>
+            <Leaf className="w-12 h-12 text-forest-600" />
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute top-32 right-16 opacity-20"
+          >
+            <Globe className="w-16 h-16 text-sky-500" />
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute bottom-40 left-1/4 opacity-20"
+          >
+            <Sparkles className="w-10 h-10 text-earth-500" />
+          </motion.div>
         </div>
-      </main>
+      </section>
+
+      {/* Core Concepts Preview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Three Simple Principles, <span className="gradient-text">Infinite Possibilities</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              At its heart, permaculture rests on three ethical foundations that guide every decision and design.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            <motion.div variants={fadeInUp}>
+              <Card className="text-center h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Leaf className="w-8 h-8 text-forest-600" />
+                  </div>
+                  <CardTitle className="mb-4">Earth Care</CardTitle>
+                  <CardDescription>
+                    Regenerate and protect our living systems. Every design must enhance rather than degrade the natural world.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="text-center h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-sky-600" />
+                  </div>
+                  <CardTitle className="mb-4">People Care</CardTitle>
+                  <CardDescription>
+                    Support humans in meeting their physical, social, and economic needs through sustainable systems.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="text-center h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-earth-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Globe className="w-8 h-8 text-earth-600" />
+                  </div>
+                  <CardTitle className="mb-4">Fair Share</CardTitle>
+                  <CardDescription>
+                    Set limits to consumption and population, redistribute surplus to support Earth and People Care.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-forest-50 to-earth-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Ready to <span className="gradient-text">Transform Your World</span>?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Whether you're working with a balcony garden or planning bioregional change, 
+              permaculture offers practical solutions for every scale.
+            </p>
+            <Link href="/introduction">
+              <Button size="lg" className="group">
+                Begin Your Permaculture Journey
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
