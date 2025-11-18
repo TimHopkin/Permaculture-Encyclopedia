@@ -13,6 +13,7 @@ const navigationItems = [
   { name: 'Ethics', href: '/ethics' },
   { name: 'Principles', href: '/principles' },
   { name: 'Techniques', href: '/techniques' },
+  { name: 'Case Studies', href: '/case-studies' },
   { name: 'UN SDGs', href: '/sdg' },
   { name: 'Getting Started', href: '/start' },
   { name: 'Resources', href: '/resources' },
