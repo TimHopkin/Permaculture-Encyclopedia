@@ -169,7 +169,7 @@ export default function Home() {
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
               Whether you're working with a balcony garden or planning bioregional change, 
-              permaculture offers practical solutions for every scale.
+              permaculture offers practical solutions for every scale and directly addresses the UN SDGs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/introduction">
@@ -178,10 +178,10 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/start">
+              <Link href="/sdg">
                 <Button variant="secondary" size="lg" className="group">
-                  Start Today
-                  <Sparkles className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Explore UN SDGs
+                  <Globe className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </Button>
               </Link>
             </div>
