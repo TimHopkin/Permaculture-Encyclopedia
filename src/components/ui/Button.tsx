@@ -4,17 +4,19 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart'> {
+interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
+  className?: string
+  onClick?: () => void
 }
 
 const variants = {
-  primary: 'bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-600 hover:to-forest-700 text-white shadow-md hover:shadow-lg',
-  secondary: 'bg-gradient-to-r from-earth-500 to-sunset-500 hover:from-earth-600 hover:to-sunset-600 text-white shadow-md hover:shadow-lg',
-  outline: 'border-2 border-forest-500 text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-earth-50 hover:text-forest-700',
-  ghost: 'text-forest-600 hover:bg-gradient-to-r hover:from-forest-50 hover:to-sky-50 hover:text-forest-700'
+  primary: 'bg-gradient-to-r from-forest-500 to-forest-600 hover:from-forest-600 hover:to-forest-700 text-white shadow-lg hover:shadow-xl border border-forest-400',
+  secondary: 'bg-gradient-to-r from-sunset-500 to-earth-500 hover:from-sunset-600 hover:to-earth-600 text-white shadow-lg hover:shadow-xl border border-sunset-400',
+  outline: 'border-2 border-forest-500 text-forest-700 bg-white hover:bg-gradient-to-r hover:from-forest-500 hover:to-forest-600 hover:text-white shadow-md hover:shadow-lg',
+  ghost: 'text-forest-700 bg-gradient-to-r from-forest-50 to-earth-50 hover:from-forest-100 hover:to-earth-100 border border-forest-200 hover:border-forest-300'
 }
 
 const sizes = {
@@ -27,8 +29,8 @@ export default function Button({
   variant = 'primary', 
   size = 'md', 
   className, 
-  children, 
-  ...props 
+  children,
+  onClick
 }: ButtonProps) {
   return (
     <motion.button
@@ -40,7 +42,7 @@ export default function Button({
         sizes[size],
         className
       )}
-      {...(props as any)}
+      onClick={onClick}
     >
       {children}
     </motion.button>

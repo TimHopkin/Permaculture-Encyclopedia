@@ -167,7 +167,7 @@ export default function Principles() {
 
           {/* Introduction */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-forest-50 to-earth-50">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-semibold mb-4 text-center">Universal Design Principles</h2>
                 <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
@@ -181,9 +181,9 @@ export default function Principles() {
           {/* Principles Grid */}
           <motion.section variants={fadeInUp}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {principles.map((principle, index) => (
+              {principles.map((principle) => (
                 <motion.div key={principle.number} variants={fadeInUp}>
-                  <Card className={`h-full border-2 ${colourClasses[principle.colour].border} ${colourClasses[principle.colour].hover} transition-colors duration-200`}>
+                  <Card variant={principle.colour as 'forest' | 'sky' | 'earth'} className="h-full">
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         <div className={`w-12 h-12 ${colourClasses[principle.colour].bg} rounded-full flex items-center justify-center`}>
@@ -223,7 +223,7 @@ export default function Principles() {
 
           {/* Integration Note */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-sky-50 to-forest-50">
+            <Card variant="gradient">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-semibold mb-4">Principles Work Together</h3>
                 <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">

@@ -8,16 +8,27 @@ interface CardProps {
   children: React.ReactNode
   className?: string
   hover?: boolean
+  variant?: 'default' | 'forest' | 'earth' | 'sky' | 'sunset' | 'gradient'
 }
 
-export default function Card({ children, className, hover = true }: CardProps) {
+export default function Card({ children, className, hover = true, variant = 'default' }: CardProps) {
+  const variants = {
+    default: 'bg-white border-forest-100 hover:shadow-forest-200/20 hover:border-forest-200',
+    forest: 'bg-gradient-to-br from-forest-50 to-forest-100 border-forest-200 hover:shadow-forest-300/30 hover:border-forest-300',
+    earth: 'bg-gradient-to-br from-earth-50 to-earth-100 border-earth-200 hover:shadow-earth-300/30 hover:border-earth-300',
+    sky: 'bg-gradient-to-br from-sky-50 to-sky-100 border-sky-200 hover:shadow-sky-300/30 hover:border-sky-300',
+    sunset: 'bg-gradient-to-br from-sunset-50 to-sunset-100 border-sunset-200 hover:shadow-sunset-300/30 hover:border-sunset-300',
+    gradient: 'bg-gradient-to-br from-forest-50 via-earth-50 to-sky-50 border-forest-200 hover:shadow-lg hover:border-forest-300'
+  }
+
   return (
     <motion.div
       whileHover={hover ? { y: -4, scale: 1.02 } : undefined}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={cn(
-        'bg-white rounded-xl shadow-sm border border-forest-100 overflow-hidden',
-        hover && 'hover:shadow-lg hover:shadow-forest-200/20 hover:border-forest-200',
+        'rounded-xl shadow-md border-2 overflow-hidden',
+        variants[variant],
+        hover && 'hover:shadow-lg',
         className
       )}
     >

@@ -44,7 +44,7 @@ export default function Introduction() {
 
           {/* What it is */}
           <motion.section variants={fadeInUp}>
-            <Card>
+            <Card variant="forest">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center">
@@ -69,7 +69,7 @@ export default function Introduction() {
 
           {/* Core Idea */}
           <motion.section variants={fadeInUp}>
-            <Card className="border-l-4 border-l-forest-500">
+            <Card variant="forest" className="border-l-4 border-l-forest-500">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-forest-700">Core Idea</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -89,7 +89,7 @@ export default function Introduction() {
             
             <div className="grid md:grid-cols-3 gap-6">
               <motion.div variants={fadeInUp}>
-                <Card className="h-full text-center">
+                <Card variant="forest" className="h-full text-center">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <TreePine className="w-8 h-8 text-forest-600" />
@@ -103,7 +103,7 @@ export default function Introduction() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <Card className="h-full text-center">
+                <Card variant="sky" className="h-full text-center">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-sky-600" />
@@ -117,7 +117,7 @@ export default function Introduction() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <Card className="h-full text-center">
+                <Card variant="earth" className="h-full text-center">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-earth-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-earth-600" />
@@ -134,7 +134,7 @@ export default function Introduction() {
 
           {/* Key Insight */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-forest-50 to-earth-50">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mt-1">
@@ -154,7 +154,7 @@ export default function Introduction() {
 
           {/* Next Steps */}
           <motion.section variants={fadeInUp} className="text-center">
-            <Card>
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4">Ready to Dive Deeper?</h3>
                 <p className="text-lg text-gray-600 mb-6">

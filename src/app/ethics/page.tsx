@@ -44,7 +44,7 @@ export default function Ethics() {
 
           {/* Earth Care */}
           <motion.section variants={fadeInUp}>
-            <Card className="overflow-hidden">
+            <Card variant="forest" className="overflow-hidden">
               <div className="bg-gradient-to-r from-forest-500 to-forest-600 text-white p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -99,7 +99,7 @@ export default function Ethics() {
 
           {/* People Care */}
           <motion.section variants={fadeInUp}>
-            <Card className="overflow-hidden">
+            <Card variant="sky" className="overflow-hidden">
               <div className="bg-gradient-to-r from-sky-500 to-sky-600 text-white p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -146,8 +146,8 @@ export default function Ethics() {
 
           {/* Fair Share */}
           <motion.section variants={fadeInUp}>
-            <Card className="overflow-hidden">
-              <div className="bg-gradient-to-r from-earth-500 to-earth-600 text-white p-8">
+            <Card variant="sunset" className="overflow-hidden">
+              <div className="bg-gradient-to-r from-sunset-500 to-earth-600 text-white p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Scale className="w-8 h-8 text-white" />
@@ -222,8 +222,8 @@ export default function Ethics() {
           </motion.section>
 
           {/* Next Steps */}
-          <motion.section variants={fadeInUp} className="text-center">
-            <Card>
+          <motion.section variants={fadeInUp} className="text-center section-earth py-12 px-4 sm:px-6 lg:px-8 rounded-2xl">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4">Ready to Apply These Ethics?</h3>
                 <p className="text-lg text-gray-600 mb-6">

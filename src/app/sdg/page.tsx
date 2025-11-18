@@ -270,10 +270,10 @@ export default function SDG() {
 
           {/* Introduction */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-forest-50 via-earth-50 to-sky-50">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-forest-400 to-earth-400 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-forest-500 to-sky-500 rounded-full flex items-center justify-center shadow-lg">
                     <Target className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -304,10 +304,14 @@ export default function SDG() {
             </div>
 
             <div className="space-y-8">
-              {sdgMappings.map((sdg, index) => (
+              {sdgMappings.map((sdg) => {
+                const cardVariant = sdg.number % 4 === 0 ? 'gradient' : 
+                                   sdg.number % 3 === 0 ? 'forest' : 
+                                   sdg.number % 2 === 0 ? 'sky' : 'earth'
+                return (
                 <motion.div key={sdg.number} variants={fadeInUp}>
-                  <Card className="overflow-hidden">
-                    <CardHeader className="bg-gradient-to-r from-forest-50 to-earth-50 p-6">
+                  <Card variant={cardVariant} className="overflow-hidden">
+                    <CardHeader className="bg-gradient-to-r from-white/80 to-white/60 p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
                           <Image
@@ -355,13 +359,14 @@ export default function SDG() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
+                )
+              })}
             </div>
           </motion.section>
 
           {/* Call to Action */}
-          <motion.section variants={fadeInUp} className="text-center">
-            <Card>
+          <motion.section variants={fadeInUp} className="text-center section-forest py-12 px-4 sm:px-6 lg:px-8 rounded-2xl">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <div className="max-w-3xl mx-auto">
                   <h3 className="text-2xl font-semibold mb-4">

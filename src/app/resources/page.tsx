@@ -149,7 +149,7 @@ export default function Resources() {
 
           {/* PDC Information */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-forest-50 to-earth-50">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center">
@@ -188,7 +188,7 @@ export default function Resources() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {books.map((book, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="h-full">
+                  <Card variant="forest" className="h-full">
                     <CardContent className="p-6">
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
@@ -223,7 +223,7 @@ export default function Resources() {
             <div className="grid md:grid-cols-2 gap-6">
               {onlineResources.map((resource, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card>
+                  <Card variant="sky">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <div>
@@ -261,7 +261,7 @@ export default function Resources() {
             <div className="grid md:grid-cols-2 gap-6">
               {examples.map((example, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card>
+                  <Card variant="earth">
                     <CardContent className="p-6">
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
@@ -286,7 +286,7 @@ export default function Resources() {
 
           {/* Getting Started */}
           <motion.section variants={fadeInUp} className="text-center">
-            <Card>
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4">Choose Your Learning Path</h3>
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">

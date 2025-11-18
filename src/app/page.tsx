@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section */}
-      <section className="relative px-4 py-20 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <section className="relative px-4 py-20 sm:px-6 lg:px-8 min-h-screen flex items-center vibrant-hero">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial="initial"
@@ -111,13 +111,13 @@ export default function Home() {
             className="grid md:grid-cols-3 gap-8"
           >
             <motion.div variants={fadeInUp}>
-              <Card className="text-center h-full">
+              <Card variant="forest" className="text-center h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Leaf className="w-8 h-8 text-forest-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-forest-400 to-forest-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Leaf className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="mb-4">Earth Care</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="mb-4 text-forest-700">Earth Care</CardTitle>
+                  <CardDescription className="text-gray-700">
                     Regenerate and protect our living systems. Every design must enhance rather than degrade the natural world.
                   </CardDescription>
                 </CardContent>
@@ -125,13 +125,13 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="text-center h-full">
+              <Card variant="sky" className="text-center h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-8 h-8 text-sky-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="mb-4">People Care</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="mb-4 text-sky-700">People Care</CardTitle>
+                  <CardDescription className="text-gray-700">
                     Support humans in meeting their physical, social, and economic needs through sustainable systems.
                   </CardDescription>
                 </CardContent>
@@ -139,13 +139,13 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="text-center h-full">
+              <Card variant="earth" className="text-center h-full">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-earth-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Globe className="w-8 h-8 text-earth-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-earth-400 to-sunset-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Globe className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="mb-4">Fair Share</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="mb-4 text-earth-700">Fair Share</CardTitle>
+                  <CardDescription className="text-gray-700">
                     Set limits to consumption and population, redistribute surplus to support Earth and People Care.
                   </CardDescription>
                 </CardContent>

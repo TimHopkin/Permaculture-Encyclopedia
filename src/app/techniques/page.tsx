@@ -176,7 +176,7 @@ export default function Techniques() {
 
           {/* Philosophy */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-forest-50 to-earth-50">
+            <Card variant="gradient">
               <CardContent className="p-8 text-center">
                 <h2 className="text-2xl font-semibold mb-4">From Principles to Practice</h2>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -192,7 +192,7 @@ export default function Techniques() {
             <div className="space-y-12">
               {techniqueCategories.map((category, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="overflow-hidden">
+                  <Card variant={category.colour as 'forest' | 'sky' | 'earth'} className="overflow-hidden">
                     <CardHeader className={`${colourClasses[category.colour].bg} p-6`}>
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center">
@@ -240,7 +240,7 @@ export default function Techniques() {
 
           {/* Social Permaculture */}
           <motion.section variants={fadeInUp}>
-            <Card className="bg-gradient-to-r from-sky-50 to-forest-50">
+            <Card variant="gradient">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
