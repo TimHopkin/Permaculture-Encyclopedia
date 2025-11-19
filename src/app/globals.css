@@ -16,6 +16,62 @@
   --color-foreground: var(--foreground);
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom color palette for permaculture theme */
+  --color-earth-50: #fefcf0;
+  --color-earth-100: #fef7e0;
+  --color-earth-200: #fdedc2;
+  --color-earth-300: #fbdfa3;
+  --color-earth-400: #f9d072;
+  --color-earth-500: #f7c948;
+  --color-earth-600: #e8b435;
+  --color-earth-700: #d4941f;
+  --color-earth-800: #b07818;
+  --color-earth-900: #8f6419;
+  
+  --color-forest-50: #f0fdf4;
+  --color-forest-100: #dcfce7;
+  --color-forest-200: #bbf7d0;
+  --color-forest-300: #86efac;
+  --color-forest-400: #4ade80;
+  --color-forest-500: #22c55e;
+  --color-forest-600: #16a34a;
+  --color-forest-700: #15803d;
+  --color-forest-800: #166534;
+  --color-forest-900: #14532d;
+  
+  --color-sky-50: #f0f9ff;
+  --color-sky-100: #e0f2fe;
+  --color-sky-200: #bae6fd;
+  --color-sky-300: #7dd3fc;
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+  --color-sky-600: #0284c7;
+  --color-sky-700: #0369a1;
+  --color-sky-800: #075985;
+  --color-sky-900: #0c4a6e;
+  
+  --color-sunset-50: #fff7ed;
+  --color-sunset-100: #ffedd5;
+  --color-sunset-200: #fed7aa;
+  --color-sunset-300: #fdba74;
+  --color-sunset-400: #fb923c;
+  --color-sunset-500: #f97316;
+  --color-sunset-600: #ea580c;
+  --color-sunset-700: #c2410c;
+  --color-sunset-800: #9a3412;
+  --color-sunset-900: #7c2d12;
+  
+  --color-flower-50: #faf5ff;
+  --color-flower-100: #f3e8ff;
+  --color-flower-200: #e9d5ff;
+  --color-flower-300: #d8b4fe;
+  --color-flower-400: #c084fc;
+  --color-flower-500: #a855f7;
+  --color-flower-600: #9333ea;
+  --color-flower-700: #7c3aed;
+  --color-flower-800: #6b21a8;
+  --color-flower-900: #581c87;
 }
 
 /* Force light theme - no dark mode */

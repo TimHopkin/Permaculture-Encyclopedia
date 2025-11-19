@@ -47,7 +47,7 @@ export default function Home() {
 
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/introduction">
-                <Button size="lg" className="group">
+                <Button size="lg" className="group text-black">
                   Start Your Journey
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { 
   BookOpen, Video, GraduationCap, MapPin, Users, 
-  ExternalLink, ArrowRight, Globe, Calendar
+  ExternalLink, ArrowRight, Globe, Calendar, Headphones
 } from 'lucide-react'
 import Card, { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
@@ -243,6 +243,79 @@ export default function Resources() {
                   </Card>
                 </motion.div>
               ))}
+            </div>
+          </motion.section>
+
+          {/* Audio Resources */}
+          <motion.section variants={fadeInUp}>
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
+                <Headphones className="w-8 h-8 text-purple-600" />
+                Audio Resources
+              </h2>
+              <p className="text-lg text-gray-600">
+                Listen to permaculture insights and teachings on the go.
+              </p>
+            </div>
+
+            <div className="grid gap-6">
+              <motion.div variants={fadeInUp}>
+                <Card variant="gradient" className="bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-semibold text-lg mb-2">Permaculture Design: The Permanent Culture Blueprint</h3>
+                      <p className="text-gray-600 text-sm mb-4">
+                        Essential audio guide exploring the foundations and principles of permaculture design for creating sustainable, permanent cultures.
+                      </p>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-sm">
+                      <audio controls className="w-full">
+                        <source src="/Permaculture_Design_The_Permanent_Culture_Blueprint.m4a" type="audio/mp4" />
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/* Video Resources */}
+          <motion.section variants={fadeInUp}>
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
+                <Video className="w-8 h-8 text-rose-600" />
+                Video Resources
+              </h2>
+              <p className="text-lg text-gray-600">
+                Watch permaculture concepts come to life through visual demonstrations.
+              </p>
+            </div>
+
+            <div className="grid gap-6">
+              <motion.div variants={fadeInUp}>
+                <Card variant="gradient" className="bg-gradient-to-r from-rose-50 to-pink-50 border-rose-200">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-semibold text-lg mb-2">Permaculture: A Quiet Revolution</h3>
+                      <p className="text-gray-600 text-sm mb-4">
+                        Explore the principles and applications of permaculture design through real-world examples and expert insights.
+                      </p>
+                    </div>
+                    <div className="bg-black rounded-lg overflow-hidden shadow-lg">
+                      <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                        <iframe
+                          src="https://www.youtube.com/embed/FiPoyREwDzk"
+                          title="Permaculture: A Quiet Revolution"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute top-0 left-0 w-full h-full border-0"
+                        />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </motion.section>
 
