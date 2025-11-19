@@ -15,6 +15,7 @@ const navigationItems = [
   { name: 'Techniques', href: '/techniques' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'UN SDGs', href: '/sdg' },
+  { name: 'Global Solutions', href: '/blog' },
   { name: 'Getting Started', href: '/start' },
   { name: 'Resources', href: '/resources' },
 ]

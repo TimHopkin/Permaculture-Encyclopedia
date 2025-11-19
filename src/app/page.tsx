@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Leaf, Users, Globe, Sparkles } from 'lucide-react'
+import { ArrowRight, Leaf, Users, Globe, Sparkles, Target, BookOpen, Map, Building2 } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Card, { CardContent, CardDescription, CardTitle } from '@/components/ui/Card'
 import Link from 'next/link'
@@ -40,8 +40,8 @@ export default function Home() {
                 <span className="block">Global Challenges</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Discover how permaculture principles can empower you to create regenerative solutions 
-                that heal the planet whilst addressing the UN Sustainable Development Goals.
+                A comprehensive guide featuring design principles, practical techniques, real-world case studies, 
+                and strategic implementation guides - all aligned with the UN Sustainable Development Goals.
               </p>
             </motion.div>
 
@@ -85,8 +85,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Concepts Preview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Content Overview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -96,10 +96,135 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Three Simple Principles, <span className="gradient-text">Infinite Possibilities</span>
+              Your Complete <span className="gradient-text">Permaculture Toolkit</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-              At its heart, permaculture rests on three ethical foundations that guide every decision and design.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              From foundational principles to real-world implementation, explore every aspect of creating regenerative systems.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <motion.div variants={fadeInUp}>
+              <Link href="/principles">
+                <Card variant="forest" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-forest-400 to-forest-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Target className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-forest-700">12 Design Principles</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Universal design principles that guide sustainable decision-making from garden to bioregion.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/techniques">
+                <Card variant="earth" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-earth-400 to-sunset-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Building2 className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-earth-700">Practical Techniques</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Proven methods for water management, soil building, energy systems, and food production.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/case-studies">
+                <Card variant="sky" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Map className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-sky-700">Global Case Studies</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Real-world examples from Andrew Millison's documentation of permaculture projects worldwide.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/sdg">
+                <Card variant="gradient" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Globe className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-gray-800">UN SDG Alignment</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Discover how permaculture directly addresses all 17 UN Sustainable Development Goals.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/blog">
+                <Card variant="forest" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <BookOpen className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-forest-700">Implementation Guides</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Strategic guides for governments, corporations, and practitioners to implement at scale.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/resources">
+                <Card variant="earth" className="text-center h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Users className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="mb-4 text-earth-700">Learning Resources</CardTitle>
+                    <CardDescription className="text-gray-700">
+                      Curated books, courses, videos, and inspiring examples to deepen your knowledge.
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Concepts Preview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              The Ethical <span className="gradient-text">Foundation</span>
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Every permaculture design is guided by three core ethics that ensure our solutions benefit both people and planet. 
+              These ethics form the foundation for all the principles, techniques, and implementations you'll explore.
             </p>
           </motion.div>
 
@@ -155,6 +280,97 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Content Highlights */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Featured <span className="gradient-text">Content Highlights</span>
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Discover key insights from our comprehensive permaculture resources.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            <motion.div variants={fadeInUp}>
+              <Card variant="gradient" className="h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-gradient-to-br from-forest-400 to-forest-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <Sparkles className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-4 text-forest-700">Principle Spotlight</CardTitle>
+                  <CardDescription className="text-gray-700 mb-4">
+                    "Observe and Interact" - The first principle teaches us to take time to engage with nature 
+                    before designing solutions that suit our particular situation.
+                  </CardDescription>
+                  <Link href="/principles">
+                    <Button variant="outline" size="sm" className="group">
+                      Explore All 12 Principles
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card variant="gradient" className="h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-4 text-sky-700">Case Study Feature</CardTitle>
+                  <CardDescription className="text-gray-700 mb-4">
+                    The Loess Plateau restoration in China demonstrates how large-scale ecosystem restoration 
+                    can lift millions from poverty while sequestering massive amounts of carbon.
+                  </CardDescription>
+                  <Link href="/case-studies">
+                    <Button variant="outline" size="sm" className="group">
+                      View All Case Studies
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card variant="gradient" className="h-full">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 bg-gradient-to-br from-earth-400 to-sunset-500 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle className="mb-4 text-earth-700">SDG Connection</CardTitle>
+                  <CardDescription className="text-gray-700 mb-4">
+                    Permaculture directly addresses SDG 13 (Climate Action) through carbon sequestration, 
+                    regenerative agriculture, and building climate-resilient ecosystems.
+                  </CardDescription>
+                  <Link href="/sdg">
+                    <Button variant="outline" size="sm" className="group">
+                      Explore SDG Alignment
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-forest-50 via-earth-50 to-sky-50">
         <div className="max-w-4xl mx-auto text-center">
@@ -171,16 +387,28 @@ export default function Home() {
               Whether you're working with a balcony garden or planning bioregional change, 
               permaculture offers practical solutions for every scale and directly addresses the UN SDGs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/introduction">
-                <Button size="lg" className="group">
-                  Begin Your Permaculture Journey
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <Link href="/principles">
+                <Button variant="outline" size="lg" className="group w-full">
+                  Learn Principles
+                  <Target className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button variant="outline" size="lg" className="group w-full">
+                  See Examples
+                  <Map className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/start">
+                <Button size="lg" className="group w-full">
+                  Start Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/sdg">
-                <Button variant="secondary" size="lg" className="group">
-                  Explore UN SDGs
+                <Button variant="secondary" size="lg" className="group w-full">
+                  Global Solutions
                   <Globe className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </Button>
               </Link>
