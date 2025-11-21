@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Globe, Building2, Users, Sprout } from 'lucide-react'
+import { ArrowRight, Globe, Building2, Users, Sprout, Droplets } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Card, { CardContent, CardDescription, CardTitle } from '@/components/ui/Card'
 import Link from 'next/link'
@@ -22,6 +22,28 @@ const stagger = {
 }
 
 const blogPosts = [
+  {
+    id: 'deep-science-of-soil',
+    title: 'Deep Science of Soil: A Perpetual Soil Health Elevation Framework',
+    description: 'Soil is not “dirt”—it’s a living ecosystem. Discover the core pillars of soil health and a blueprint for perpetual elevation.',
+    audience: 'Farmers, Gardeners & Land Managers',
+    icon: Sprout,
+    gradient: 'from-earth-400 to-earth-600',
+    cardVariant: 'earth' as const,
+    readTime: '12 min read',
+    highlights: ['Soil Physics, Chemistry & Biology', 'Regenerative Techniques', '10-Year Elevation Blueprint']
+  },
+  {
+    id: 'watermans-revolution',
+    title: 'The Waterman’s Revolution: Global Solutions to the Water Crisis',
+    description: 'A Comprehensive Report on Dr. Rajendra Singh, his proven low-cost techniques for reviving river systems, and their growing global reach.',
+    audience: 'Visionary Leaders & Policymakers',
+    icon: Droplets,
+    gradient: 'from-blue-400 to-blue-600',
+    cardVariant: 'sky' as const,
+    readTime: '10 min read',
+    highlights: ['Community-led water management', 'Low-cost water harvesting', 'Global replication models']
+  },
   {
     id: 'un-implementation',
     title: 'Permaculture: The Missing Operating System for UN SDG Achievement',
@@ -92,7 +114,7 @@ export default function BlogIndex() {
 
             <motion.div variants={fadeInUp}>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Each guide is tailored for specific decision-makers and includes actionable strategies, 
+                Each guide is tailored for specific decision-makers and includes actionable strategies,
                 real-world case studies, and measurable outcomes for implementing permaculture at scale.
               </p>
             </motion.div>
@@ -120,7 +142,7 @@ export default function BlogIndex() {
                           <div className="text-sm text-gray-500">{post.readTime}</div>
                         </div>
                       </div>
-                      
+
                       <CardTitle className="mb-4 text-xl leading-tight">{post.title}</CardTitle>
                       <CardDescription className="text-gray-700 mb-6 leading-relaxed">
                         {post.description}
@@ -161,7 +183,7 @@ export default function BlogIndex() {
             <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-white/20">
               <h2 className="text-2xl font-bold mb-4">Ready to Implement Global Change?</h2>
               <p className="text-gray-700 mb-6">
-                These guides represent actionable pathways to solving humanity's greatest challenges. 
+                These guides represent actionable pathways to solving humanity's greatest challenges.
                 Start with the guide most relevant to your role and sphere of influence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
