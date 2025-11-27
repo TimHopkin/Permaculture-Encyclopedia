@@ -13,6 +13,7 @@ const navigationGroups = [
     name: 'Learn',
     type: 'dropdown',
     items: [
+      { name: 'Online Course', href: '/course' },
       { name: 'Introduction', href: '/introduction' },
       { name: 'Ethics', href: '/ethics' },
       { name: 'Principles', href: '/principles' },
@@ -51,6 +52,21 @@ export default function Navigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = React.useState(false)
   const [openDropdown, setOpenDropdown] = React.useState<string | null>(null)
+  const [dropdownTimeout, setDropdownTimeout] = React.useState<NodeJS.Timeout | null>(null)
+
+  const handleMouseEnter = (groupName: string) => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+    }
+    setOpenDropdown(groupName)
+  }
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setOpenDropdown(null)
+    }, 300) // 300ms delay before closing
+    setDropdownTimeout(timeout)
+  }
 
   const isActiveLink = (href: string) => pathname === href
   const isActiveGroup = (items: { href: string }[] | undefined) => {
@@ -98,8 +114,8 @@ export default function Navigation() {
                 <div
                   key={group.name}
                   className="relative"
-                  onMouseEnter={() => setOpenDropdown(group.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onMouseEnter={() => handleMouseEnter(group.name)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <button
                     className={cn(
