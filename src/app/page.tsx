@@ -40,7 +40,7 @@ export default function Home() {
                 <span className="block">Global Challenges</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                A comprehensive guide featuring design principles, practical techniques, real-world case studies, 
+                A comprehensive guide featuring design principles, practical techniques, real-world case studies,
                 and strategic implementation guides - all aligned with the UN Sustainable Development Goals.
               </p>
             </motion.div>
@@ -81,6 +81,111 @@ export default function Home() {
             className="absolute bottom-40 left-1/4 opacity-35"
           >
             <Sparkles className="w-10 h-10 text-earth-500" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Choose Your Path Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-forest-50 via-white to-earth-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Choose <span className="gradient-text">Your Path</span>
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Whether you're exploring permaculture for the first time or ready to scale solutions globally,
+              we have a pathway designed for your journey.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <motion.div variants={fadeInUp}>
+              <Link href="/introduction">
+                <Card variant="forest" className="h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-forest-400 to-forest-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                      <Leaf className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-xl text-center mb-2">New to Permaculture?</h3>
+                    <p className="text-gray-600 text-center text-sm">
+                      Start with the basics and understand core concepts
+                    </p>
+                    <div className="flex justify-center mt-4">
+                      <ArrowRight className="w-5 h-5 text-forest-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/case-studies">
+                <Card variant="sky" className="h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                      <Map className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-xl text-center mb-2">Want Inspiration?</h3>
+                    <p className="text-gray-600 text-center text-sm">
+                      See real-world case studies and success stories
+                    </p>
+                    <div className="flex justify-center mt-4">
+                      <ArrowRight className="w-5 h-5 text-sky-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/start">
+                <Card variant="earth" className="h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-earth-400 to-sunset-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                      <Sparkles className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-xl text-center mb-2">Ready to Start?</h3>
+                    <p className="text-gray-600 text-center text-sm">
+                      Take practical steps and find opportunities
+                    </p>
+                    <div className="flex justify-center mt-4">
+                      <ArrowRight className="w-5 h-5 text-earth-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/sdg">
+                <Card variant="gradient" className="h-full hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                      <Globe className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-xl text-center mb-2">Scaling Solutions?</h3>
+                    <p className="text-gray-600 text-center text-sm">
+                      Explore global impact and implementation guides
+                    </p>
+                    <div className="flex justify-center mt-4">
+                      <ArrowRight className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -223,7 +328,7 @@ export default function Home() {
               The Ethical <span className="gradient-text">Foundation</span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Every permaculture design is guided by three core ethics that ensure our solutions benefit both people and planet. 
+              Every permaculture design is guided by three core ethics that ensure our solutions benefit both people and planet.
               These ethics form the foundation for all the principles, techniques, and implementations you'll explore.
             </p>
           </motion.div>
@@ -313,7 +418,7 @@ export default function Home() {
                   </div>
                   <CardTitle className="mb-4 text-forest-700">Principle Spotlight</CardTitle>
                   <CardDescription className="text-gray-700 mb-4">
-                    "Observe and Interact" - The first principle teaches us to take time to engage with nature 
+                    "Observe and Interact" - The first principle teaches us to take time to engage with nature
                     before designing solutions that suit our particular situation.
                   </CardDescription>
                   <Link href="/principles">
@@ -334,7 +439,7 @@ export default function Home() {
                   </div>
                   <CardTitle className="mb-4 text-sky-700">Case Study Feature</CardTitle>
                   <CardDescription className="text-gray-700 mb-4">
-                    The Loess Plateau restoration in China demonstrates how large-scale ecosystem restoration 
+                    The Loess Plateau restoration in China demonstrates how large-scale ecosystem restoration
                     can lift millions from poverty while sequestering massive amounts of carbon.
                   </CardDescription>
                   <Link href="/case-studies">
@@ -355,7 +460,7 @@ export default function Home() {
                   </div>
                   <CardTitle className="mb-4 text-earth-700">SDG Connection</CardTitle>
                   <CardDescription className="text-gray-700 mb-4">
-                    Permaculture directly addresses SDG 13 (Climate Action) through carbon sequestration, 
+                    Permaculture directly addresses SDG 13 (Climate Action) through carbon sequestration,
                     regenerative agriculture, and building climate-resilient ecosystems.
                   </CardDescription>
                   <Link href="/sdg">
@@ -384,7 +489,7 @@ export default function Home() {
               Ready to <span className="gradient-text">Transform Your World</span>?
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Whether you're working with a balcony garden or planning bioregional change, 
+              Whether you're working with a balcony garden or planning bioregional change,
               permaculture offers practical solutions for every scale and directly addresses the UN SDGs.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
