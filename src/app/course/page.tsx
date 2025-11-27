@@ -1097,8 +1097,8 @@ export default function Course() {
                                                         key={lesson.id}
                                                         onClick={() => setCurrentLesson(lesson.id)}
                                                         className={`w-full text-left px-3 py-2 rounded text-sm flex items-center gap-2 ${currentLesson === lesson.id
-                                                                ? 'bg-forest-100 text-forest-700 font-medium'
-                                                                : ' hover:bg-gray-100'
+                                                            ? 'bg-forest-100 text-forest-700 font-medium'
+                                                            : ' hover:bg-gray-100'
                                                             }`}
                                                     >
                                                         {completedLessons.has(lesson.id) ? (
@@ -1156,8 +1156,8 @@ export default function Course() {
                                     <button
                                         onClick={() => toggleLesson(currentLesson)}
                                         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${completedLessons.has(currentLesson)
-                                                ? 'bg-forest-100 text-forest-700'
-                                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                            ? 'bg-forest-100 text-forest-700'
+                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
                                     >
                                         {completedLessons.has(currentLesson) ? (
@@ -1178,20 +1178,40 @@ export default function Course() {
                                 <Card variant="gradient">
                                     <CardContent className="p-8 prose prose-lg max-w-none">
                                         <div
+                                            className="markdown-content"
                                             dangerouslySetInnerHTML={{
                                                 __html: lessonData?.content
                                                     .split('\n')
                                                     .map(line => {
-                                                        if (line.startsWith('# ')) return `<h1 class="text-3xl font-bold mt-8 mb-4">${line.slice(2)}</h1>`
-                                                        if (line.startsWith('## ')) return `<h2 class="text-2xl font-bold mt-6 mb-3">${line.slice(3)}</h2>`
-                                                        if (line.startsWith('### ')) return `<h3 class="text-xl font-semibold mt-4 mb-2">${line.slice(4)}</h3>`
-                                                        if (line.startsWith('**') && line.endsWith('**')) return `<p class="font-bold mt-4">${line.slice(2, -2)}</p>`
-                                                        if (line.startsWith('- ')) return `<li class="ml-6">${line.slice(2)}</li>`
-                                                        if (line.startsWith('✓ ')) return `<li class="ml-6 text-forest-700"><span class="font-semibold">✓</span> ${line.slice(2)}</li>`
-                                                        if (line.startsWith('❌ ')) return `<li class="ml-6"><span class="text-red-600">❌</span> ${line.slice(2)}</li>`
+                                                        // Convert inline formatting
+                                                        let processedLine = line
+                                                            // Bold
+                                                            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                                                            // Italic
+                                                            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+                                                            // Code
+                                                            .replace(/`(.+?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm">$1</code>')
+
+                                                        // Block elements
+                                                        if (line.startsWith('# ')) return `<h1 class="text-3xl font-bold mt-8 mb-4 text-gray-900">${processedLine.slice(2)}</h1>`
+                                                        if (line.startsWith('## ')) return `<h2 class="text-2xl font-bold mt-6 mb-3 text-gray-800">${processedLine.slice(3)}</h2>`
+                                                        if (line.startsWith('### ')) return `<h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800">${processedLine.slice(4)}</h3>`
+                                                        if (line.startsWith('#### ')) return `<h4 class="text-lg font-semibold mt-3 mb-2 text-gray-700">${processedLine.slice(5)}</h4>`
+
+                                                        // Lists
+                                                        if (line.startsWith('- ')) return `<li class="ml-6 my-1">${processedLine.slice(2)}</li>`
+                                                        if (line.match(/^\d+\. /)) return `<li class="ml-6 my-1">${processedLine.replace(/^\d+\. /, '')}</li>`
+                                                        if (line.startsWith('✓ ')) return `<li class="ml-6 my-1 text-forest-700"><span class="font-semibold">✓</span> ${processedLine.slice(2)}</li>`
+                                                        if (line.startsWith('❌ ')) return `<li class="ml-6 my-1"><span class="text-red-600 font-semibold">❌</span> ${processedLine.slice(2)}</li>`
+
+                                                        // Horizontal rule
                                                         if (line.trim() === '---') return '<hr class="my-8 border-gray-300" />'
-                                                        if (line.trim() === '') return '<br/>'
-                                                        return `<p class="my-3 leading-relaxed">${line}</p>`
+
+                                                        // Empty lines
+                                                        if (line.trim() === '') return '<div class="h-4"></div>'
+
+                                                        // Regular paragraphs
+                                                        return `<p class="my-3 leading-relaxed text-gray-700">${processedLine}</p>`
                                                     })
                                                     .join('')
                                             }}
