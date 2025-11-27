@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {
     PawPrint, Leaf, Heart, Globe, ArrowRight, Activity,
-    Droplets, Sun, Sprout, ShieldCheck, Zap, Briefcase
+    Droplets, Sun, Sprout, ShieldCheck, Zap, Briefcase, Video
 } from 'lucide-react'
 import Card, { CardContent } from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
@@ -139,6 +139,31 @@ export default function RewildingExplainer() {
                                 priority
                             />
                         </div>
+                    </motion.section>
+
+                    {/* Featured Video */}
+                    <motion.section variants={fadeInUp}>
+                        <Card variant="gradient" className="bg-gradient-to-r from-forest-50 to-earth-50 border-forest-200">
+                            <CardContent className="p-8">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center">
+                                        <Video className="w-6 h-6 text-forest-600" />
+                                    </div>
+                                    <h2 className="text-2xl font-semibold">Watch: Rewilding Explained</h2>
+                                </div>
+                                <div className="bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                                        <iframe
+                                            src="https://www.youtube.com/embed/UsAuHfe9b2c"
+                                            title="Rewilding Video"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className="absolute top-0 left-0 w-full h-full border-0"
+                                        />
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </motion.section>
 
                     {/* Section 1: What Is Rewilding? */}
