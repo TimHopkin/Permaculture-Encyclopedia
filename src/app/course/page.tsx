@@ -1180,7 +1180,7 @@ export default function Course() {
                                         <div
                                             className="markdown-content"
                                             dangerouslySetInnerHTML={{
-                                                __html: lessonData?.content
+                                                __html: (lessonData?.content ?? '')
                                                     .split('\n')
                                                     .map(line => {
                                                         // Convert inline formatting
