@@ -25,25 +25,37 @@ export default function BlogPost() {
 
                     <div>
                         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                            Blog Post Title
+                            Rainwater Harvesting: Free Water for Your Garden
                         </h1>
                         <div className="flex items-center gap-4 text-gray-600">
                             <div className="flex items-center gap-1">
                                 <Clock className="w-4 h-4" />
-                                <span className="text-sm">5 min read</span>
+                                <span className="text-sm">7 min read</span>
                             </div>
                             <div className="flex items-center gap-1">
                                 <Tag className="w-4 h-4" />
-                                <span className="text-sm">Category</span>
+                                <span className="text-sm">Water Management</span>
                             </div>
                         </div>
                     </div>
 
                     <Card variant="gradient">
                         <CardContent className="p-8">
-                            <div className="prose prose-lg max-w-none">
+                            <div className="prose prose-lg max-w-none space-y-6">
                                 <p className="text-lg leading-relaxed text-gray-700">
-                                    This post provides concise, actionable permaculture information. Content can be expanded later.
+                                    Every time it rains, thousands of gallons of water flow off your roof and disappear into storm drains. A 1,000 square foot roof captures about 600 gallons from just one inch of rain. That's free water you could be using to irrigate your garden, reducing your water bills and building resilience against drought. Rainwater harvesting is one of the simplest and most impactful permaculture techniques you can implement.
+                                </p>
+
+                                <p className="text-lg leading-relaxed text-gray-700">
+                                    Start simple with a rain barrel connected to your downspout—these 50-80 gallon containers cost around $50-100 and can be installed in an afternoon. For larger systems, consider multiple barrels linked together or a cistern that stores hundreds or thousands of gallons. The water can be used directly for gardens with a spigot and hose, or you can add a pump for more pressure. Make sure to use food-grade containers if you plan to use the water for vegetables, and add a screen to keep out mosquitoes and debris.
+                                </p>
+
+                                <p className="text-lg leading-relaxed text-gray-700">
+                                    Beyond containers, consider earthworks like swales—level trenches dug on contour that capture and infiltrate runoff directly into the soil. Swales are perfect for larger properties and can transform how water moves across your landscape, preventing erosion while deeply hydrating trees and plants. Rain gardens are another option: shallow depressions planted with native species that temporarily hold water and allow it to soak in. These techniques work best when combined—use barrels for quick access water and swales for long-term soil moisture storage.
+                                </p>
+
+                                <p className="text-lg leading-relaxed text-gray-700">
+                                    Check local regulations before installing large systems, as some areas have restrictions on rainwater collection (though most don't). In many climates, rainwater harvesting can supply 50-100% of your garden's water needs during the growing season. Start small, observe how water moves on your property, and scale up as you learn. Your garden—and your water bill—will thank you.
                                 </p>
                             </div>
                         </CardContent>
