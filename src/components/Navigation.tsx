@@ -34,6 +34,7 @@ const navigationGroups = [
     items: [
       { name: 'Getting Started', href: '/start' },
       { name: 'Find Opportunities', href: '/opportunities' },
+      { name: 'Site Analysis Tool', href: '/site-analysis' },
     ]
   },
   {
